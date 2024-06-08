@@ -4,7 +4,7 @@ import morgan from "morgan";
 
 // local import files
 import userRoutes from "./routers/userRoutes.js";
-
+import employeeRoute from "./routers/employeeRoutes.js";
 //initialize the express
 const app = express();
 
@@ -15,9 +15,10 @@ app.use(express.json());
 
 //routes
 app.use("/api/", userRoutes);
+app.use("/api/", employeeRoute);
 //listners
-app.listen(9000, () => {
-  console.log("Server is running on PORT: 9000");
+app.listen(6000, () => {
+  console.log("Server is running on PORT: 6000");
 });
 
 export default app;
